@@ -1,2 +1,6 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @post.title %></h1>
+<h3>By: <%= @post.blogger.name %></h3>
+<p><%= @post.content %></p>
+<div>Total likes: <%= @post.likes %></div>
+<br>
+<%= button_to "Give me a like!", { action: "update" }, method: :add_like %>

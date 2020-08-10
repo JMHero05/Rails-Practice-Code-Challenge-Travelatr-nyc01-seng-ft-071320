@@ -2,8 +2,8 @@
 <div><%= @blogger.age %></div>
 <div><%= @blogger.bio %></div>
 <h4>Featured Post:</h4>
-<%= @post.featured_post %>
-Likes: <%= @post.featured_post.likes %><br>
+<%= link_to @blogger.featured_post.title, post_path(@blogger.featured_post) %><br>
+Likes: <%= @blogger.featured_post.likes %><br>
 <br>
 <h4>All Posts:</h4>
 <ul>
