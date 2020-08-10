@@ -23,15 +23,16 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
+  def button
+    post = Post.find(params[:id])
+    post.update(likes: post.likes + 1)
+    redirect_to post_path(post)
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :content, :likes, :blogger_id, :destination_id)
-  end
-
-  def add_like
-    self.likes += 1
-    # redirect_to post_path(@post)
   end
 
 end

@@ -7,7 +7,6 @@ class Post < ApplicationRecord
 
   def add_like
     self.likes += 1
-    # redirect_to post_path(@post)
   end
 
 end

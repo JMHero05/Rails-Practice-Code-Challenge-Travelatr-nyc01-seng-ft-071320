@@ -3,4 +3,4 @@
 <p><%= @post.content %></p>
 <div>Total likes: <%= @post.likes %></div>
 <br>
-<%= button_to "Give me a like!", { action: "update" }, method: :add_like %>
+<%= button_to "Add Like", button_path(@post), method: :get %>
