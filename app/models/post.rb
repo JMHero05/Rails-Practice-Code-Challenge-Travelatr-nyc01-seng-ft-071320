@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :blogger
   belongs_to :destination
   default_scope { order(created_at: :asc) }
-  validates :content, length: { minimum: 1 }
+  validates :content, length: { minimum: 100 }
   validates :title, presence: true
 
   def add_like
